@@ -129,5 +129,5 @@ void stats_layer_update(StatsLayer *stats_layer) {
 
 	time_t updated_at = 0;
 	persist_read_data(STORAGE_REWARDS_UPDATED_AT, &updated_at, sizeof(updated_at));
-	stats_layer_set_updated_at(stats_layer, updated_at);
+	stats_layer_set_updated_at(stats_layer, time(NULL));
 }
